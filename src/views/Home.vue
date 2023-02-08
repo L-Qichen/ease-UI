@@ -6,7 +6,7 @@
       <h2>A perfect Vue UI library.</h2>
       <p class="actions">
         <a href="">Github</a>
-        <a href="">Start</a>
+        <router-link to="/doc">Get Started</router-link>
       </p>
     </div>
   </div>
