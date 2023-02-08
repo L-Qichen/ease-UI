@@ -1,0 +1,30 @@
+<template>
+  <div class="Topnav">
+    <div class="logo">logo</div>
+    <ul class="menu">
+      <li>menu1</li>
+      <li>menu2</li>
+    </ul>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.Topnav {
+  background: pink;
+  display: flex;
+  padding: 16px;
+  /* justify-content: space-between; */
+  > .logo {
+    max-width: 6em;
+    margin-right: auto;
+  }
+  > .menu {
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    > li {
+      margin: 0 1em;
+    }
+  }
+}
+</style>
