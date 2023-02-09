@@ -1,6 +1,7 @@
 <template>
   <div class="Topnav">
-    <div class="logo" @click="toggleMenu">logo</div>
+    <div class="logo">logo</div>
+    <span class="toggleAside" @click="toggleMenu"></span>
     <ul class="menu">
       <li>menu1</li>
       <li>menu2</li>
@@ -28,7 +29,8 @@ export default {
   padding: 16px;
   position: relative;
   z-index: 10;
-  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
   > .logo {
     max-width: 6rem;
     margin-right: auto;
@@ -38,7 +40,28 @@ export default {
     white-space: nowrap;
     flex-wrap: nowrap;
     > li {
-      margin: 0 1em;
+      margin: 0 1rem;
+    }
+  }
+  > .toggleAside {
+    display: none;
+    width: 24px;
+    height: 24px;
+    background: red;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (max-width: 500px) {
+    > .logo {
+      margin: 0 auto;
+    }
+    > .menu {
+      display: none;
+    }
+    > .toggleAside {
+      display: inline-block;
     }
   }
 }
