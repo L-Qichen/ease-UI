@@ -62,14 +62,12 @@ export default {
     flex-shrink: 0;
   }
   > main {
-    border: 1px solid blue;
     flex-grow: 1;
     padding: 16px;
     background: lightgreen;
   }
 }
 aside {
-  border: 1px solid red;
   background: lightblue;
   width: 12rem;
   padding: 1rem;
