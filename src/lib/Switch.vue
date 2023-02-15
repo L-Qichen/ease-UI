@@ -36,11 +36,15 @@ span {
   width: $h2;
   background: white;
   border-radius: 50%;
+  transition: left 250ms;
 }
 .checked {
   background: blue;
   > span {
     left: calc(100% - $h2 - 1px);
   }
+}
+button:focus {
+  outline: none;
 }
 </style>
