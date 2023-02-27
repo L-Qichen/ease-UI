@@ -2,8 +2,8 @@
   <div>
     <Button> Button </Button>
     <Button theme="button"> Button </Button>
-    <Button theme="link"> Button </Button>
-    <Button theme="text"> Button </Button>
+    <Button theme="link"> Link Button </Button>
+    <Button theme="text"> Text Button </Button>
   </div>
 </template>
 
@@ -22,7 +22,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
-  border: 1px solid red;
-}
 </style>
