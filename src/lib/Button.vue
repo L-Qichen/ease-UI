@@ -1,10 +1,11 @@
 <template>
-  <button class="ease-button" :class="`ease-theme-${theme}`">
+  <button class="ease-button" :class="classes">
     <slot />
   </button>
 </template>
 
 <script lang="ts">
+import { computed } from "vue";
 export default {
   props: {
     theme: {
@@ -12,7 +13,15 @@ export default {
       default: "button",
     },
   },
-  setup() {},
+  setup(props) {
+    const { theme } = props;
+    const classes = computed(() => {
+      return {
+        [`ease-theme-${theme}`]: theme,
+      };
+    });
+    return { classes };
+  },
 };
 </script>
 
@@ -49,6 +58,24 @@ $radius: 4px;
   }
   &::-moz-focus-inner {
     border: 0;
+  }
+  &.ease-theme-link {
+    border-color: transparent;
+    box-shadow: none;
+    color: $blue;
+    &:hover,
+    &:focus {
+      color: lighten($blue, 10%);
+    }
+  }
+  &.ease-theme-text {
+    border-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    &:hover,
+    &:focus {
+      background: darken(white, 5%);
+    }
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Button> Button </Button>
+    <Button> Default </Button>
     <Button theme="button"> Button </Button>
     <Button theme="link"> Link Button </Button>
     <Button theme="text"> Text Button </Button>
@@ -12,12 +12,6 @@ import Button from "../lib/Button.vue";
 
 export default {
   components: { Button },
-  setup() {
-    const onClick = () => {
-      console.log("hi");
-    };
-    return { onClick };
-  },
 };
 </script>
 
