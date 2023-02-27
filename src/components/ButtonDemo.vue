@@ -1,103 +1,13 @@
 <template>
-  <div>Button Content.</div>
-  <div>The 1 div</div>
-  <div>The 2 div</div>
-  <div>The 3 div</div>
-  <div>The 4 div</div>
-  <div>The 5 div</div>
-  <div>The 6 div</div>
-  <div>The 7 div</div>
-  <div>The 8 div</div>
-  <div>The 9 div</div>
-  <div>The 10 div</div>
-  <div>The 11 div</div>
-  <div>The 12 div</div>
-  <div>The 13 div</div>
-  <div>The 14 div</div>
-  <div>The 15 div</div>
-  <div>The 16 div</div>
-  <div>The 17 div</div>
-  <div>The 18 div</div>
-  <div>The 19 div</div>
-  <div>The 20 div</div>
-  <div>The 21 div</div>
-  <div>The 22 div</div>
-  <div>The 23 div</div>
-  <div>The 24 div</div>
-  <div>The 25 div</div>
-  <div>The 26 div</div>
-  <div>The 27 div</div>
-  <div>The 28 div</div>
-  <div>The 29 div</div>
-  <div>The 30 div</div>
-  <div>The 31 div</div>
-  <div>The 32 div</div>
-  <div>The 33 div</div>
-  <div>The 34 div</div>
-  <div>The 35 div</div>
-  <div>The 36 div</div>
-  <div>The 37 div</div>
-  <div>The 38 div</div>
-  <div>The 39 div</div>
-  <div>The 40 div</div>
-  <div>The 41 div</div>
-  <div>The 42 div</div>
-  <div>The 43 div</div>
-  <div>The 44 div</div>
-  <div>The 45 div</div>
-  <div>The 46 div</div>
-  <div>The 47 div</div>
-  <div>The 48 div</div>
-  <div>The 49 div</div>
-  <div>The 50 div</div>
-  <div>The 51 div</div>
-  <div>The 52 div</div>
-  <div>The 53 div</div>
-  <div>The 54 div</div>
-  <div>The 55 div</div>
-  <div>The 56 div</div>
-  <div>The 57 div</div>
-  <div>The 58 div</div>
-  <div>The 59 div</div>
-  <div>The 60 div</div>
-  <div>The 61 div</div>
-  <div>The 62 div</div>
-  <div>The 63 div</div>
-  <div>The 64 div</div>
-  <div>The 65 div</div>
-  <div>The 66 div</div>
-  <div>The 67 div</div>
-  <div>The 68 div</div>
-  <div>The 69 div</div>
-  <div>The 70 div</div>
-  <div>The 71 div</div>
-  <div>The 72 div</div>
-  <div>The 73 div</div>
-  <div>The 74 div</div>
-  <div>The 75 div</div>
-  <div>The 76 div</div>
-  <div>The 77 div</div>
-  <div>The 78 div</div>
-  <div>The 79 div</div>
-  <div>The 80 div</div>
-  <div>The 81 div</div>
-  <div>The 82 div</div>
-  <div>The 83 div</div>
-  <div>The 84 div</div>
-  <div>The 85 div</div>
-  <div>The 86 div</div>
-  <div>The 87 div</div>
-  <div>The 88 div</div>
-  <div>The 89 div</div>
-  <div>The 90 div</div>
-  <div>The 91 div</div>
-  <div>The 92 div</div>
-  <div>The 93 div</div>
-  <div>The 94 div</div>
-  <div>The 95 div</div>
-  <div>The 96 div</div>
-  <div>The 97 div</div>
-  <div>The 98 div</div>
-  <div>The 99 div</div>
-  <div>The 100 div</div>
+  <div>
+    <Button> Button </Button>
+  </div>
 </template>
+
+<script lang="ts">
+import Button from "../lib/Button.vue";
+
+export default {
+  components: { Button },
+};
+</script>
