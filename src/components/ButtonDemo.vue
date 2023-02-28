@@ -1,17 +1,23 @@
 <template>
   <div>
     <h1>Default Buttons</h1>
-    <Button size="large"> Large </Button>
-    <Button> Default </Button>
-    <Button size="small"> small </Button>
+    <div>
+      <Button size="large"> Large </Button>
+      <Button> Default </Button>
+      <Button size="small"> small </Button>
+    </div>
     <h1>Link Buttons</h1>
-    <Button theme="link" size="large"> Large </Button>
-    <Button theme="link" size="normal"> Link Button </Button>
-    <Button theme="link" size="small"> Small </Button>
+    <div>
+      <Button theme="link" size="large"> Large </Button>
+      <Button theme="link" size="normal"> Link Button </Button>
+      <Button theme="link" size="small"> Small </Button>
+    </div>
     <h1>Text Buttons</h1>
-    <Button theme="text" size="large"> Large </Button>
-    <Button theme="text" size="normal"> Text Button </Button>
-    <Button theme="text" size="small"> small </Button>
+    <div>
+      <Button theme="text" size="large"> Large </Button>
+      <Button theme="text" size="normal"> Text Button </Button>
+      <Button theme="text" size="small"> small </Button>
+    </div>
     <h1>Priority Levels</h1>
     <div>
       <dir>
@@ -29,6 +35,12 @@
         <Button theme="text"> Text Button </Button>
         <Button theme="text" priority="danger"> Danger Text Button </Button>
       </dir>
+    </div>
+    <h1>Disabled Buttons</h1>
+    <div>
+      <Button disabled>Disabled</Button>
+      <Button disabled theme="link">Link Button</Button>
+      <Button disabled theme="text">Text Button</Button>
     </div>
   </div>
 </template>

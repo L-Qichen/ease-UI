@@ -1,5 +1,5 @@
 <template>
-  <button class="ease-button" :class="classes">
+  <button class="ease-button" :class="classes" :disabled="disabled">
     <slot />
   </button>
 </template>
@@ -19,6 +19,10 @@ export default {
     priority: {
       type: String,
       default: "normal",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
   setup(props) {
@@ -42,6 +46,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .ease-button {
   box-sizing: border-box;
   height: $h;
@@ -143,6 +148,14 @@ $red: red;
       &:focus {
         color: darken($color: $red, $amount: 10%);
       }
+    }
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    color: grey;
+    &:hover {
+      color: $grey;
+      border-color: $grey;
     }
   }
 }
