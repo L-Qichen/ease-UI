@@ -12,12 +12,17 @@ export default {
       type: String,
       default: "button",
     },
+    size: {
+      type: String,
+      default: "normal",
+    },
   },
   setup(props) {
-    const { theme } = props;
+    const { theme, size } = props;
     const classes = computed(() => {
       return {
         [`ease-theme-${theme}`]: theme,
+        [`ease-size-${size}`]: size,
       };
     });
     return { classes };
@@ -76,6 +81,16 @@ $radius: 4px;
     &:focus {
       background: darken(white, 5%);
     }
+  }
+  &.ease-size-large {
+    font-size: 24px;
+    height: 48px;
+    padding: 0 16px;
+  }
+  &.ease-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
   }
 }
 </style>
