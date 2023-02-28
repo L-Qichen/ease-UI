@@ -16,13 +16,18 @@ export default {
       type: String,
       default: "normal",
     },
+    priority: {
+      type: String,
+      default: "normal",
+    },
   },
   setup(props) {
-    const { theme, size } = props;
+    const { theme, size, priority } = props;
     const classes = computed(() => {
       return {
         [`ease-theme-${theme}`]: theme,
         [`ease-size-${size}`]: size,
+        [`ease-priority-${priority}`]: priority,
       };
     });
     return { classes };
@@ -36,6 +41,7 @@ $border-color: #d9d9d9;
 $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
+$red: red;
 .ease-button {
   box-sizing: border-box;
   height: $h;
@@ -91,6 +97,53 @@ $radius: 4px;
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
+  }
+  &.ease-theme-button {
+    &.ease-priority-primary {
+      background: $blue;
+      color: white;
+      border-color: $blue;
+      &:hover,
+      &:focus {
+        background: darken($blue, 10%);
+        border-color: darken($blue, 10%);
+      }
+    }
+    &.ease-priority-danger {
+      background: $red;
+      color: white;
+      border-color: $red;
+      &:hover,
+      &:focus {
+        background: darken($red, 10%);
+        border-color: darken($color: $red, $amount: 10%);
+      }
+    }
+  }
+  &.ease-theme-link {
+    &.ease-priority-danger {
+      color: $red;
+      &:hover,
+      &:focus {
+        color: darken($color: $red, $amount: 10%);
+      }
+    }
+  }
+  &.ease-theme-text {
+    &.ease-priority-primary {
+      color: $blue;
+      &:hover,
+      &:focus {
+        color: darken($color: $blue, $amount: 10%);
+      }
+    }
+    &.ease-priority-danger {
+      color: $red;
+      &:hover,
+      &:focus {
+        color: darken($color: $red, $amount: 10%);
+      }
+    }
   }
 }
 </style>
