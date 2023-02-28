@@ -42,6 +42,12 @@
       <Button disabled theme="link">Link Button</Button>
       <Button disabled theme="text">Text Button</Button>
     </div>
+    <h1>Loading</h1>
+    <div>
+      <Button loading>Loading</Button>
+      <Button theme="link" loading>Link</Button>
+      <Button theme="text" loading>Text</Button>
+    </div>
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
   <button class="ease-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="ease-loading-indicator"></span>
     <slot />
   </button>
 </template>
@@ -21,6 +22,10 @@ export default {
       default: "normal",
     },
     disabled: {
+      type: Boolean,
+      default: false,
+    },
+    loading: {
       type: Boolean,
       default: false,
     },
@@ -157,6 +162,25 @@ $grey: grey;
       color: $grey;
       border-color: $grey;
     }
+  }
+  > .ease-loading-indicator {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: ease-spin 1s infinite linear;
+  }
+}
+@keyframes ease-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 </style>
