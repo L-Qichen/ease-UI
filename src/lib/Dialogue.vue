@@ -5,7 +5,7 @@
       <div class="ease-dialogue">
         <header>
           Title
-          <span class="ease-dialogue-close"></span>
+          <span class="ease-dialogue-close" @click="close"></span>
         </header>
         <main>
           <p>First sentence</p>
@@ -32,6 +32,12 @@ export default {
   },
   components: {
     Button,
+  },
+  setup(props, context) {
+    const close = () => {
+      context.emit("update:isVisible", false);
+    };
+    return { close };
   },
 };
 </script>
