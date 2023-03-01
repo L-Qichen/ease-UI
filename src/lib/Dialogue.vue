@@ -1,20 +1,21 @@
 <template>
   <template v-if="isVisible">
-    <div class="ease-dialogue-overlay"></div>
-    <div class="ease-dialogue-wrapper">
-      <div class="ease-dialogue">
-        <header>
-          Title
-          <span class="ease-dialogue-close" @click="close"></span>
-        </header>
-        <main>
-          <p>First sentence</p>
-          <p>Second sentence</p>
-        </main>
-        <footer>
-          <Button>Confirm</Button>
-          <Button>Cancel</Button>
-        </footer>
+    <div class="ease-dialogue-overlay" @click="onClickOverlay">
+      <div class="ease-dialogue-wrapper">
+        <div class="ease-dialogue">
+          <header>
+            Title
+            <span class="ease-dialogue-close" @click="close"></span>
+          </header>
+          <main>
+            <p>First sentence</p>
+            <p>Second sentence</p>
+          </main>
+          <footer>
+            <Button>Confirm</Button>
+            <Button>Cancel</Button>
+          </footer>
+        </div>
       </div>
     </div>
   </template>
@@ -29,6 +30,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true,
+    },
   },
   components: {
     Button,
@@ -37,7 +42,12 @@ export default {
     const close = () => {
       context.emit("update:isVisible", false);
     };
-    return { close };
+    const onClickOverlay = () => {
+      if (props.closeOnClickOverlay) {
+        close();
+      }
+    };
+    return { close, onClickOverlay };
   },
 };
 </script>
