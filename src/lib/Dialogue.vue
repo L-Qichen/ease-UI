@@ -1,27 +1,35 @@
 <template>
-  <div class="ease-dialogue-overlay"></div>
-  <div class="ease-dialogue-wrapper">
-    <div class="ease-dialogue">
-      <header>
-        Title
-        <span class="ease-dialogue-close"></span>
-      </header>
-      <main>
-        <p>First sentence</p>
-        <p>Second sentence</p>
-      </main>
-      <footer>
-        <Button>Confirm</Button>
-        <Button>Cancel</Button>
-      </footer>
+  <template v-if="isVisible">
+    <div class="ease-dialogue-overlay"></div>
+    <div class="ease-dialogue-wrapper">
+      <div class="ease-dialogue">
+        <header>
+          Title
+          <span class="ease-dialogue-close"></span>
+        </header>
+        <main>
+          <p>First sentence</p>
+          <p>Second sentence</p>
+        </main>
+        <footer>
+          <Button>Confirm</Button>
+          <Button>Cancel</Button>
+        </footer>
+      </div>
     </div>
-  </div>
+  </template>
 </template>
 
 <script lang="ts">
 import Button from "../lib/Button.vue";
 
 export default {
+  props: {
+    isVisible: {
+      type: Boolean,
+      default: false,
+    },
+  },
   components: {
     Button,
   },

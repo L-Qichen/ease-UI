@@ -1,17 +1,22 @@
 <template>
   <h1>Dialogue Component</h1>
-  <Dialogue />
+  <Button @click="toggle">Toggle Dialogue</Button>
+  <Dialogue :isVisible="isVisible" />
 </template>
 
 <script lang="ts">
 import Dialogue from "../lib/Dialogue.vue";
+import Button from "../lib/Button.vue";
+import { ref } from "vue";
 
 export default {
-  components: { Dialogue },
+  components: { Dialogue, Button },
   setup() {
-    components: {
-      Dialogue;
-    }
+    const isVisible = ref(false);
+    const toggle = () => {
+      isVisible.value = !isVisible.value;
+    };
+    return { isVisible, toggle };
   },
 };
 </script>
