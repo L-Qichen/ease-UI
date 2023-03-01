@@ -1,7 +1,12 @@
 <template>
   <h1>Dialogue Component</h1>
   <Button @click="toggle">Toggle Dialogue</Button>
-  <Dialogue v-model:isVisible="isVisible" :closeOnClickOverlay="false" />
+  <Dialogue
+    v-model:isVisible="isVisible"
+    :closeOnClickOverlay="false"
+    :confirmFn="confirmFn"
+    :cancelFn="cancelFn"
+  />
 </template>
 
 <script lang="ts">
@@ -16,7 +21,13 @@ export default {
     const toggle = () => {
       isVisible.value = !isVisible.value;
     };
-    return { isVisible, toggle };
+    const confirmFn = () => {
+      return false;
+    };
+    const cancelFn = () => {
+      return true;
+    };
+    return { isVisible, toggle, confirmFn, cancelFn };
   },
 };
 </script>

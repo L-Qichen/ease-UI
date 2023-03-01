@@ -12,8 +12,8 @@
             <p>Second sentence</p>
           </main>
           <footer>
-            <Button>Confirm</Button>
-            <Button>Cancel</Button>
+            <Button priority="primary" @click="confirm">Confirm</Button>
+            <Button @click="cancel">Cancel</Button>
           </footer>
         </div>
       </div>
@@ -34,6 +34,12 @@ export default {
       type: Boolean,
       default: true,
     },
+    confirmFn: {
+      type: Function,
+    },
+    cancelFn: {
+      type: Function,
+    },
   },
   components: {
     Button,
@@ -47,7 +53,17 @@ export default {
         close();
       }
     };
-    return { close, onClickOverlay };
+    const confirm = () => {
+      if (props.confirmFn?.() !== false) {
+        close();
+      }
+    };
+    const cancel = () => {
+      if (props.cancelFn?.() !== false) {
+        close();
+      }
+    };
+    return { close, onClickOverlay, confirm, cancel };
   },
 };
 </script>
