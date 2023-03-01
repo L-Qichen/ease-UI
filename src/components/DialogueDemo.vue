@@ -6,7 +6,10 @@
     :closeOnClickOverlay="false"
     :confirmFn="confirmFn"
     :cancelFn="cancelFn"
-  />
+  >
+    <div>Content Box</div>
+    <div>You can input any content you want.</div>
+  </Dialogue>
 </template>
 
 <script lang="ts">

@@ -4,12 +4,11 @@
       <div class="ease-dialogue-wrapper">
         <div class="ease-dialogue">
           <header>
-            Title
+            {{ title }}
             <span class="ease-dialogue-close" @click="close"></span>
           </header>
           <main>
-            <p>First sentence</p>
-            <p>Second sentence</p>
+            <slot />
           </main>
           <footer>
             <Button priority="primary" @click="confirm">Confirm</Button>
@@ -26,6 +25,10 @@ import Button from "../lib/Button.vue";
 
 export default {
   props: {
+    title: {
+      type: String,
+      default: "Title",
+    },
     isVisible: {
       type: Boolean,
       default: false,
