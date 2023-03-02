@@ -1,22 +1,24 @@
 <template>
   <template v-if="isVisible">
-    <div class="ease-dialogue-overlay" @click="onClickOverlay">
-      <div class="ease-dialogue-wrapper">
-        <div class="ease-dialogue">
-          <header>
-            <slot name="title" />
-            <span class="ease-dialogue-close" @click="close"></span>
-          </header>
-          <main>
-            <slot name="content" />
-          </main>
-          <footer>
-            <Button priority="primary" @click="confirm">Confirm</Button>
-            <Button @click="cancel">Cancel</Button>
-          </footer>
+    <Teleport to="body">
+      <div class="ease-dialogue-overlay" @click="onClickOverlay">
+        <div class="ease-dialogue-wrapper">
+          <div class="ease-dialogue">
+            <header>
+              <slot name="title" />
+              <span class="ease-dialogue-close" @click="close"></span>
+            </header>
+            <main>
+              <slot name="content" />
+            </main>
+            <footer>
+              <Button priority="primary" @click="confirm">Confirm</Button>
+              <Button @click="cancel">Cancel</Button>
+            </footer>
+          </div>
         </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
