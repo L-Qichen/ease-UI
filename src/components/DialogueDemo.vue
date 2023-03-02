@@ -7,8 +7,13 @@
     :confirmFn="confirmFn"
     :cancelFn="cancelFn"
   >
-    <div>Content Box</div>
-    <div>You can input any content you want.</div>
+    <template v-slot:title>
+      <strong>Title</strong>
+    </template>
+    <template v-slot:content>
+      <div>Content</div>
+      <div>Input any content you want.</div>
+    </template>
   </Dialogue>
 </template>
 
