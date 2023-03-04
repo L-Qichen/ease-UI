@@ -4,16 +4,20 @@
       <div
         class="ease-tabs-nav-item"
         v-for="(title, index) in titles"
+        :class="{ selected: title === selected }"
         :key="index"
+        @click="selectedTab(title)"
       >
         {{ title }}
       </div>
     </div>
     <div class="ease-tabs-content">
       <component
+        class="ease-tabs-content-item"
         v-for="(component, index) in defaults"
         :key="index"
         :is="component"
+        :class="{ selected: component.props.title === selected }"
       />
     </div>
   </div>
@@ -23,6 +27,11 @@
 <script lang="ts">
 import Tab from "./Tab.vue";
 export default {
+  props: {
+    selected: {
+      type: String,
+    },
+  },
   setup(props, context) {
     const defaults = context.slots.default();
     defaults.forEach((tag) => {
@@ -35,7 +44,10 @@ export default {
     const titles = defaults.map((tag) => {
       return tag.props.title;
     });
-    return { defaults, titles };
+    const selectedTab = (title: String) => {
+      context.emit("update:selected", title);
+    };
+    return { defaults, titles, selectedTab };
   },
 };
 </script>
@@ -63,6 +75,12 @@ $border-color: #d9d9d9;
   }
   &-content {
     padding: 8px 0;
+    &-item {
+      display: none;
+      &.selected {
+        display: block;
+      }
+    }
   }
 }
 </style>
