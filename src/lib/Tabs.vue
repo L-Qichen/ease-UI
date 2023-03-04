@@ -4,13 +4,18 @@
       <div
         class="ease-tabs-nav-item"
         v-for="(title, index) in titles"
+        :ref="
+          (el) => {
+            if (el) navItems[index] = el;
+          }
+        "
         :class="{ selected: title === selected }"
         :key="index"
         @click="selectedTab(title)"
       >
         {{ title }}
       </div>
-      <div class="ease-tabs-nav-indicator"></div>
+      <div class="ease-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="ease-tabs-content">
       <component
@@ -27,6 +32,7 @@
 
 <script lang="ts">
 import Tab from "./Tab.vue";
+import { onMounted, ref } from "vue";
 export default {
   props: {
     selected: {
@@ -34,6 +40,16 @@ export default {
     },
   },
   setup(props, context) {
+    const navItems = ref<HTMLDivElement[]>([]);
+    const indicator = ref<HTMLDivElement>(null);
+    onMounted(() => {
+      const divs = navItems.value;
+      const result = divs.filter((div) =>
+        div.classList.contains("selected")
+      )[0];
+      const { width } = result.getBoundingClientRect();
+      indicator.value.style.width = width + "px";
+    });
     const defaults = context.slots.default();
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
@@ -48,7 +64,7 @@ export default {
     const selectedTab = (title: String) => {
       context.emit("update:selected", title);
     };
-    return { defaults, titles, selectedTab };
+    return { defaults, titles, selectedTab, navItems, indicator };
   },
 };
 </script>
