@@ -1,6 +1,6 @@
 <template>
   <div class="ease-tabs">
-    <div class="ease-tabs-nav">
+    <div class="ease-tabs-nav" ref="container">
       <div
         class="ease-tabs-nav-item"
         v-for="(title, index) in titles"
@@ -32,7 +32,7 @@
 
 <script lang="ts">
 import Tab from "./Tab.vue";
-import { onMounted, ref } from "vue";
+import { onMounted, onUpdated, ref } from "vue";
 export default {
   props: {
     selected: {
@@ -42,14 +42,21 @@ export default {
   setup(props, context) {
     const navItems = ref<HTMLDivElement[]>([]);
     const indicator = ref<HTMLDivElement>(null);
-    onMounted(() => {
+    const container = ref<HTMLDivElement>(null);
+    const x = () => {
       const divs = navItems.value;
       const result = divs.filter((div) =>
         div.classList.contains("selected")
       )[0];
       const { width } = result.getBoundingClientRect();
       indicator.value.style.width = width + "px";
-    });
+      const { left: left1 } = container.value.getBoundingClientRect();
+      const { left: left2 } = result.getBoundingClientRect();
+      const left = left2 - left1;
+      indicator.value.style.left = left + "px";
+    };
+    onMounted(x);
+    onUpdated(x);
     const defaults = context.slots.default();
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
@@ -64,7 +71,7 @@ export default {
     const selectedTab = (title: String) => {
       context.emit("update:selected", title);
     };
-    return { defaults, titles, selectedTab, navItems, indicator };
+    return { defaults, titles, selectedTab, navItems, indicator, container };
   },
 };
 </script>
@@ -97,6 +104,7 @@ $border-color: #d9d9d9;
       height: 3px;
       width: 100px;
       background: $blue;
+      transition: all 250ms;
     }
   }
   &-content {
