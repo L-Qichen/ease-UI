@@ -20,10 +20,8 @@
     <div class="ease-tabs-content">
       <component
         class="ease-tabs-content-item"
-        v-for="(component, index) in defaults"
-        :key="index"
-        :is="component"
-        :class="{ selected: component.props.title === selected }"
+        :key="current.props.title"
+        :is="current"
       />
     </div>
   </div>
@@ -32,7 +30,7 @@
 
 <script lang="ts">
 import Tab from "./Tab.vue";
-import { onMounted, ref, watchEffect } from "vue";
+import { computed, onMounted, ref, watchEffect } from "vue";
 export default {
   props: {
     selected: {
@@ -67,6 +65,9 @@ export default {
     const selectedTab = (title: String) => {
       context.emit("update:selected", title);
     };
+    const current = computed(() => {
+      return defaults.find((tag) => tag.props.title === props.selected);
+    });
     return {
       defaults,
       titles,
@@ -74,6 +75,7 @@ export default {
       selectedItem,
       indicator,
       container,
+      current,
     };
   },
 };
@@ -112,12 +114,6 @@ $border-color: #d9d9d9;
   }
   &-content {
     padding: 8px 0;
-    &-item {
-      display: none;
-      &.selected {
-        display: block;
-      }
-    }
   }
 }
 </style>
