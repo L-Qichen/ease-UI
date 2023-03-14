@@ -24,7 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 .Topnav {
-  background: pink;
   display: flex;
   padding: 16px;
   position: fixed;
