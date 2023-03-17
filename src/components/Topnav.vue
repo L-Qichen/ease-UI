@@ -23,7 +23,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$fontColor: #007974;
 .Topnav {
+  color: $fontColor;
   display: flex;
   padding: 16px;
   position: fixed;
