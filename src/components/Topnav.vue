@@ -1,6 +1,10 @@
 <template>
   <div class="Topnav">
-    <div class="logo">logo</div>
+    <div class="logo">
+      <svg class="icon">
+        <use xlink:href="#icon-logo"></use>
+      </svg>
+    </div>
     <span class="toggleAside" @click="toggleMenu"></span>
     <ul class="menu">
       <li>menu1</li>
@@ -36,6 +40,10 @@ $fontColor: #007974;
   justify-content: center;
   align-items: center;
   > .logo {
+    > svg {
+      width: 48px;
+      height: 48px;
+    }
     max-width: 6rem;
     margin-right: auto;
   }

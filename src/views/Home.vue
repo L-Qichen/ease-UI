@@ -11,6 +11,17 @@
         </p>
       </div>
     </div>
+    <div class="features">
+      <svg class="icon">
+        <use xlink:href="#icon-vue"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-ts"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-code"></use>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -48,6 +59,13 @@ $fontColor: #007974;
       border-radius: 8px;
       padding: 8px 24px;
     }
+  }
+}
+
+.features {
+  > svg {
+    width: 64px;
+    height: 64px;
   }
 }
 </style>
