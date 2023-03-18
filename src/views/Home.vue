@@ -9,6 +9,10 @@
           <a href="">Github</a>
           <router-link to="/doc">Get Started</router-link>
         </p>
+        <div class="sea">
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
       </div>
     </div>
     <div class="features">
@@ -49,6 +53,8 @@ $fontColor: #007974;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
   > .actions {
     padding: 8px 0;
     a {
@@ -60,8 +66,47 @@ $fontColor: #007974;
       padding: 8px 24px;
     }
   }
+  > .sea {
+    background: #015871;
+    width: 100vw;
+    height: 2.5vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    > .wave {
+      background: url("/src/assets/wave.svg") repeat-x;
+      width: 480vw;
+      height: 20vh;
+      position: absolute;
+      top: -20vh;
+      animation: wave 6.5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    }
+    > .wave:nth-child(2) {
+      top: -20vh;
+      animation: wave 6.5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite,
+        float 6.5s ease infinite;
+      animation-delay: -0.2s;
+      border: 1px solid red;
+    }
+  }
 }
-
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -111vw;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 2.5vh);
+  }
+  50% {
+    transform: translate(0, 0.5vh);
+  }
+}
 .features {
   > svg {
     width: 64px;
