@@ -5,11 +5,9 @@
         <use xlink:href="#icon-logo"></use>
       </svg>
     </div>
-    <span
-      v-if="isShowToggleAside"
-      class="toggleAside"
-      @click="toggleMenu"
-    ></span>
+    <svg v-if="isShowToggleAside" class="toggleAside" @click="toggleMenu">
+      <use xlink:href="#icon-menu"></use>
+    </svg>
     <ul class="menu">
       <li>
         <router-link to="/doc">Components</router-link>
@@ -68,9 +66,8 @@ $fontColor: #007974;
   }
   > .toggleAside {
     display: none;
-    width: 24px;
-    height: 24px;
-    background: red;
+    width: 20px;
+    height: 20px;
     position: absolute;
     left: 16px;
     top: 50%;
