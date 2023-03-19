@@ -48,13 +48,13 @@ $fontColor: #007974;
 }
 .banner {
   color: $fontColor;
-  padding: 100px 0;
+  padding: 25vh 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   > .actions {
     padding: 8px 0;
     a {
@@ -69,24 +69,25 @@ $fontColor: #007974;
   > .sea {
     background: #015871;
     width: 100vw;
-    height: 2.5vh;
+    height: 4vh;
     position: absolute;
     left: 0;
     bottom: 0;
     > .wave {
       background: url("/src/assets/wave.svg") repeat-x;
-      width: 480vw;
-      height: 20vh;
+      width: 640vw;
+      height: 22vh;
       position: absolute;
-      top: -20vh;
-      animation: wave 6.5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+      top: -21vh;
+      animation: wave 9s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite
+        alternate-reverse;
     }
     > .wave:nth-child(2) {
-      top: -20vh;
-      animation: wave 6.5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite,
-        float 6.5s ease infinite;
-      animation-delay: -0.2s;
-      border: 1px solid red;
+      top: -22vh;
+      animation: wave 9s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite
+          alternate-reverse,
+        float 9s ease infinite alternate-reverse;
+      animation-delay: -0.3s;
     }
   }
 }
@@ -95,7 +96,7 @@ $fontColor: #007974;
     margin-left: 0;
   }
   100% {
-    margin-left: -111vw;
+    margin-left: -160vw;
   }
 }
 @keyframes float {
