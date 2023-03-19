@@ -16,15 +16,29 @@
       </div>
     </div>
     <div class="features">
-      <svg class="icon">
-        <use xlink:href="#icon-vue"></use>
-      </svg>
-      <svg class="icon">
-        <use xlink:href="#icon-ts"></use>
-      </svg>
-      <svg class="icon">
-        <use xlink:href="#icon-code"></use>
-      </svg>
+      <ul>
+        <li>
+          <svg class="icon">
+            <use xlink:href="#icon-vue"></use>
+          </svg>
+          <h1>Built with Vue3</h1>
+          <p>Utilizes Vue3 Composition API</p>
+        </li>
+        <li>
+          <svg class="icon">
+            <use xlink:href="#icon-ts"></use>
+          </svg>
+          <h1>Typescript Enabled</h1>
+          <p>Source code written in Typescript</p>
+        </li>
+        <li>
+          <svg class="icon">
+            <use xlink:href="#icon-code"></use>
+          </svg>
+          <h1>Easy to Use</h1>
+          <p>Flexible customization and expansion</p>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -48,7 +62,7 @@ $fontColor: #007974;
 }
 .banner {
   color: $fontColor;
-  padding: 15vh 0 25vh 0;
+  padding: 12vh 0 24vh 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,9 +123,41 @@ $fontColor: #007974;
   }
 }
 .features {
-  > svg {
-    width: 64px;
-    height: 64px;
+  margin: 48px auto;
+  width: 400px;
+  @media (min-width: 800px) {
+    width: 800px;
+  }
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+  > ul {
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+      width: 400px;
+      margin: 16px 0;
+      display: grid;
+      justify-content: start;
+      align-content: space-between;
+      grid-template-areas:
+        "icon title"
+        "icon text";
+      grid-template-columns: 80px auto;
+      grid-template-rows: 1fr auto;
+      > svg {
+        grid-area: icon;
+        width: 64px;
+        height: 64px;
+      }
+      > h1 {
+        grid-area: title;
+        font-size: 28px;
+      }
+      > p {
+        grid-area: text;
+      }
+    }
   }
 }
 </style>

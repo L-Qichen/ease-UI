@@ -7,8 +7,9 @@
     </div>
     <span class="toggleAside" @click="toggleMenu"></span>
     <ul class="menu">
-      <li>menu1</li>
-      <li>menu2</li>
+      <li>
+        <router-link to="/doc">Components</router-link>
+      </li>
     </ul>
   </div>
 </template>
