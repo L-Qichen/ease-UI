@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="topnavAndBanner">
-      <Topnav isShowToggleAside />
+      <Topnav />
       <div class="banner">
         <h1>EASE UI</h1>
         <h2>A perfect Vue UI library.</h2>
@@ -68,7 +68,7 @@ $fontColor: #007974;
   justify-content: center;
   align-items: center;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
   > .actions {
     padding: 8px 0;
     a {

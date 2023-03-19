@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <topnav class="nav" />
+    <topnav isShowToggleAside class="nav" />
     <div class="content">
       <aside v-if="menuVisible">
         <h2>Components</h2>
