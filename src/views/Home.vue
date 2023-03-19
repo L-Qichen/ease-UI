@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="topnavAndBanner">
-      <Topnav />
+      <Topnav isShowToggleAside />
       <div class="banner">
         <h1>EASE UI</h1>
         <h2>A perfect Vue UI library.</h2>

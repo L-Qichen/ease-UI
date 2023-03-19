@@ -5,7 +5,11 @@
         <use xlink:href="#icon-logo"></use>
       </svg>
     </div>
-    <span class="toggleAside" @click="toggleMenu"></span>
+    <span
+      v-if="isShowToggleAside"
+      class="toggleAside"
+      @click="toggleMenu"
+    ></span>
     <ul class="menu">
       <li>
         <router-link to="/doc">Components</router-link>
@@ -17,6 +21,12 @@
 <script lang="ts">
 import { inject, Ref } from "vue";
 export default {
+  props: {
+    isShowToggleAside: {
+      type: Boolean,
+      default: false,
+    },
+  },
   setup() {
     const menuVisible = inject<Ref<boolean>>("menuVisible");
     const toggleMenu = () => {
