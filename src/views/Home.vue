@@ -48,7 +48,7 @@ $fontColor: #007974;
 }
 .banner {
   color: $fontColor;
-  padding: 25vh 0;
+  padding: 15vh 0 25vh 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
