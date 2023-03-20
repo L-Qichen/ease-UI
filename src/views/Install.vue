@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="markdown-body">
     <h1>Installation</h1>
     <p>Open Terminal and run the following command:</p>
     <pre><code>$ yarn add ease-ui</code></pre>

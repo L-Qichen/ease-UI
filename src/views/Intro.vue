@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="markdown-body">
     <h1>Introduction</h1>
     <p>
       I wrote EASE UI for study purposes. It's a UI library based on Vue 3 and
@@ -16,7 +16,7 @@
     <p>
       However, if you wanted to checkout the source code, then you're most
       definitely in the right place. All the source code is stored in a public
-      repository, here's the link: https://github.com/L-Qichen/ease-UI The
+      repository, here's the link: https://github.com/L-Qichen/ease-UI. The
       history commit information shows very clearly what I have done, and you
       can view them one by one in commit order. You can also view the source
       code and examples for each component directly and run the project

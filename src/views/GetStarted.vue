@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="markdown-body">
     <h1>Get Started</h1>
     <p>Please <a href="#/doc/install">install</a> this UI library first.</p>
     <p>Import components in your project</p>
