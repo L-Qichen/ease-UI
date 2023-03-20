@@ -80,9 +80,10 @@ export default {
   }
 }
 aside {
-  background: lightblue;
+  color: #015871;
+  background: #02bcb0;
   width: 12rem;
-  padding: 1rem;
+  padding: 1rem 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -90,10 +91,18 @@ aside {
   height: 100%;
   > h2 {
     margin-bottom: 4px;
+    padding: 0 1rem;
   }
   > ol {
     > li {
-      padding: 4px 0;
+      > a {
+        padding: 4px 1rem;
+        display: block;
+      }
+      > .router-link-active {
+        background: white;
+        font-weight: 666;
+      }
     }
   }
   main {
