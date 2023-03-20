@@ -80,8 +80,8 @@ export default {
   }
 }
 aside {
-  color: #015871;
-  background: #02bcb0;
+  color: white;
+  background: #015871;
   width: 12rem;
   padding: 1rem 0;
   position: fixed;
@@ -102,6 +102,7 @@ aside {
       > .router-link-active {
         background: white;
         font-weight: 666;
+        color: #015871;
       }
     }
   }
