@@ -1,10 +1,14 @@
 <template>
-  <article class="markdown-body">
-    <h1>Installation</h1>
-    <p>Open Terminal and run the following command:</p>
-    <pre><code>$ yarn add ease-ui</code></pre>
-    <p>or</p>
-    <pre><code>$ npm install ease-ui</code></pre>
-    <p>Next:<a href="#/doc/get-started">Get Started</a></p>
-  </article>
+  <article class="markdown-body" v-html="md"></article>
 </template>
+
+<script>
+import md from "../markdown/install.md";
+export default {
+  data() {
+    return {
+      md,
+    };
+  },
+};
+</script>

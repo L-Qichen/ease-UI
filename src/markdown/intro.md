@@ -18,4 +18,4 @@ can view them one by one in commit order. You can also view the source
 code and examples for each component directly and run the project
 following the steps described in README.md.
 
-Next: [Installation]("#/doc/install")
+Next: [Installation](#/doc/install)
