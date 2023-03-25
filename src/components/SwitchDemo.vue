@@ -9,7 +9,7 @@
       <Button>Source Code</Button>
     </div>
     <div class="demo-code">
-      <pre>&lt;Switch v-model:value="bool" /&gt;</pre>
+      <pre>{{ Switch1Demo.__sourceCode }}</pre>
     </div>
   </div>
   <div class="demo">
@@ -21,7 +21,7 @@
       <Button>Source Code</Button>
     </div>
     <div class="demo-code">
-      <pre>&lt;Switch v-model:value="bool" disabled/&gt;</pre>
+      <pre>{{ Switch2Demo.__sourceCode }}</pre>
     </div>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
   },
   setup() {
     const bool = ref(false);
-    return { bool };
+    return { Switch1Demo, Switch2Demo, bool };
   },
 };
 </script>

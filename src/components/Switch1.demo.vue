@@ -1,3 +1,4 @@
+<demo>Common Use Case</demo>
 <template>
   <Switch v-model:value="bool" />
 </template>
