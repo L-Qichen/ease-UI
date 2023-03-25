@@ -3,7 +3,7 @@
   <div class="demo">
     <h2>Common Use Case</h2>
     <div class="demo-component">
-      <Switch v-model:value="bool" />
+      <Switch1Demo />
     </div>
     <div class="demo-actions">
       <Button>Source Code</Button>
@@ -15,7 +15,7 @@
   <div class="demo">
     <h2>Support Disabled</h2>
     <div class="demo-component">
-      <Switch v-model:value="bool" disabled />
+      <Switch2Demo />
     </div>
     <div class="demo-actions">
       <Button>Source Code</Button>
@@ -28,11 +28,13 @@
 
 <script lang="ts">
 import { ref } from "vue";
-import Switch from "../lib/Switch.vue";
 import Button from "../lib/Button.vue";
+import Switch1Demo from "./Switch1.demo.vue";
+import Switch2Demo from "./Switch2.demo.vue";
 export default {
   components: {
-    Switch,
+    Switch1Demo,
+    Switch2Demo,
     Button,
   },
   setup() {
