@@ -1,5 +1,5 @@
 <template>
-  <h1>Switch Component Demo</h1>
+  <h1>Switch Component</h1>
   <Demo :component="Switch1Demo" />
   <Demo :component="Switch2Demo" />
 </template>

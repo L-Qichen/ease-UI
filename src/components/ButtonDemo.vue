@@ -1,61 +1,37 @@
 <template>
   <div>
-    <h1>Default Buttons</h1>
-    <div>
-      <Button size="large"> Large </Button>
-      <Button> Default </Button>
-      <Button size="small"> small </Button>
-    </div>
-    <h1>Link Buttons</h1>
-    <div>
-      <Button theme="link" size="large"> Large </Button>
-      <Button theme="link" size="normal"> Link Button </Button>
-      <Button theme="link" size="small"> Small </Button>
-    </div>
-    <h1>Text Buttons</h1>
-    <div>
-      <Button theme="text" size="large"> Large </Button>
-      <Button theme="text" size="normal"> Text Button </Button>
-      <Button theme="text" size="small"> small </Button>
-    </div>
-    <h1>Priority Levels</h1>
-    <div>
-      <dir>
-        <Button priority="primary"> Primary </Button>
-        <Button>Default</Button>
-        <Button priority="danger"> Danger </Button>
-      </dir>
-      <dir>
-        <Button theme="link" priority="primary"> Primary Link Button </Button>
-        <Button theme="link"> Link Button </Button>
-        <Button theme="link" priority="danger"> Danger Link Button </Button>
-      </dir>
-      <dir>
-        <Button theme="text" priority="primary"> Primary Text Button </Button>
-        <Button theme="text"> Text Button </Button>
-        <Button theme="text" priority="danger"> Danger Text Button </Button>
-      </dir>
-    </div>
-    <h1>Disabled Buttons</h1>
-    <div>
-      <Button disabled>Disabled</Button>
-      <Button disabled theme="link">Link Button</Button>
-      <Button disabled theme="text">Text Button</Button>
-    </div>
-    <h1>Loading</h1>
-    <div>
-      <Button loading>Loading</Button>
-      <Button theme="link" loading>Link</Button>
-      <Button theme="text" loading>Text</Button>
-    </div>
+    <h1>Button Component</h1>
+    <Demo :component="Button1Demo" />
+    <Demo :component="Button2Demo" />
+    <Demo :component="Button6Demo" />
+    <Demo :component="Button3Demo" />
+    <Demo :component="Button4Demo" />
+    <Demo :component="Button5Demo" />
   </div>
 </template>
 
 <script lang="ts">
 import Button from "../lib/Button.vue";
+import Button1Demo from "./Button1.demo.vue";
+import Button2Demo from "./Button2.demo.vue";
+import Button3Demo from "./Button3.demo.vue";
+import Button4Demo from "./Button4.demo.vue";
+import Button5Demo from "./Button5.demo.vue";
+import Button6Demo from "./Button6.demo.vue";
+import Demo from "./Demo.vue";
 
 export default {
-  components: { Button },
+  components: { Button, Demo },
+  setup() {
+    return {
+      Button1Demo,
+      Button2Demo,
+      Button3Demo,
+      Button4Demo,
+      Button5Demo,
+      Button6Demo,
+    };
+  },
 };
 </script>
 
