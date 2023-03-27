@@ -40,7 +40,7 @@ export default {
 $border-color: #d9d9d9;
 .demo {
   border: 1px solid $border-color;
-  margin: 16px 32px;
+  margin: 16px 0 32px;
   > h2 {
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
