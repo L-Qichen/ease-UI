@@ -22,7 +22,10 @@ export const openDialogue = (options) => {
           cancelFn,
           closeOnClickOverlay,
         }, // props
-        { title, content } //slots
+        {
+          title: () => title,
+          content: () => content
+        } //slots
       );
     }
   });
