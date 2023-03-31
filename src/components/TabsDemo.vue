@@ -1,23 +1,17 @@
 <template>
   <h1>Tabs Component</h1>
-  <Tabs v-model:selected="currentTab">
-    <Tab title="tab1">Tab 1 Content</Tab>
-    <Tab title="tab2">Tab 2 Content</Tab>
-  </Tabs>
+  <Demo :component="Tabs1Demo" />
 </template>
 
 <script lang="ts">
-import { ref } from "vue";
-import Tab from "../lib/Tab.vue";
-import Tabs from "../lib/Tabs.vue";
+import Tabs1Demo from "./Tabs1.demo.vue";
+import Demo from "./Demo.vue";
 export default {
   components: {
-    Tab,
-    Tabs,
+    Demo,
   },
   setup() {
-    const currentTab = ref("tab1");
-    return { currentTab };
+    return { Tabs1Demo };
   },
 };
 </script>
