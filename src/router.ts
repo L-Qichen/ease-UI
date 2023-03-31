@@ -5,7 +5,6 @@ import SwitchDemo from './components/SwitchDemo.vue'
 import ButtonDemo from './components/ButtonDemo.vue'
 import DialogueDemo from './components/DialogueDemo.vue'
 import TabsDemo from './components/TabsDemo.vue'
-import WelcomeDocs from './components/WelcomeDocs.vue'
 import Markdown from "./components/Markdown.vue"
 import { h } from 'vue'
 
@@ -18,7 +17,7 @@ export const router = createRouter({
     {
       path: '/doc', component: Doc,
       children: [
-        { path: '', component: WelcomeDocs },
+        { path: '', redirect: '/doc/intro' },
         { path: 'intro', component: md("intro") },
         { path: 'get-started', component: md("get-started") },
         { path: 'install', component: md("install") },
