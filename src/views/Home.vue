@@ -6,7 +6,7 @@
         <h1>EASE UI</h1>
         <h2>A perfect Vue UI library.</h2>
         <p class="actions">
-          <a href="">Github</a>
+          <a href="https://github.com/L-Qichen/ease-UI">Github</a>
           <router-link to="/doc">Get Started</router-link>
         </p>
         <div class="sea">
