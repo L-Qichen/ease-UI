@@ -5,7 +5,7 @@ rm -rf dist &&
  git add . &&
  git commit -m "update" &&
  git branch -M master &&
- git remote add origin git@github.com:FrankFang/gulu-ui-website-1.git &&
+ git remote add origin git@github.com:L-Qichen/ease-ui-website.git &&
  git push -f -u origin master &&
  cd -
- echo https://fangyinghang.com/gulu-ui-website-1/index.html 
+ echo https://l-qichen.github.io/ease-ui-website/index.html
