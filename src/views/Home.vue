@@ -88,7 +88,7 @@ $fontColor: #007974;
     left: 0;
     bottom: 0;
     > .wave {
-      background: url("/src/assets/wave.svg") repeat-x;
+      background: url("/wave.svg") repeat-x;
       width: 640vw;
       height: 22vh;
       position: absolute;
