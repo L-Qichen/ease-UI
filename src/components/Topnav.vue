@@ -10,7 +10,7 @@
     </svg>
     <ul class="menu">
       <li>
-        <router-link to="/doc">Components</router-link>
+        <router-link to="/doc/switch">Components</router-link>
       </li>
     </ul>
   </div>
