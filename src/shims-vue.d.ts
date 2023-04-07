@@ -1,4 +1,3 @@
-// 适配 Vue 和 TypeScript
 declare module '*.vue' {
   import { ComponentOptions } from 'vue'
   const componentOptions: ComponentOptions
@@ -8,4 +7,9 @@ declare module '*.vue' {
 declare module '*.md' {
   const str: string
   export default str
+}
+
+declare module '*.svg' {
+  const content: string
+  export default content
 }

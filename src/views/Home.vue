@@ -44,9 +44,21 @@
 </template>
 
 <script lang="ts">
+// @ts-nocheck
 import Topnav from "../components/Topnav.vue";
+import wave from "./wave.svg";
+import { onMounted } from "vue";
 export default {
   components: { Topnav },
+  setup() {
+    onMounted(() => {
+      const waves = Array.from(document.getElementsByClassName("wave"));
+      waves.map((item) => {
+        console.log("test");
+        item.style.background = `url(${wave})`;
+      });
+    });
+  },
 };
 </script>
 
@@ -88,7 +100,7 @@ $fontColor: #007974;
     left: 0;
     bottom: 0;
     > .wave {
-      background: url("/wave.svg") repeat-x;
+      background: repeat-x;
       width: 640vw;
       height: 22vh;
       position: absolute;
