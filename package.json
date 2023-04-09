@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build && mv dist/fonts dist/assets/"
   },
   "dependencies": {
     "github-markdown-css": "^5.2.0",
