@@ -11,7 +11,7 @@ export default {
       vue: 'Vue'
     },
     name: 'Ease-UI',
-    file: 'dist/lib/gulu.js',
+    file: 'dist/lib/ease-ui.js',
     format: 'umd',
     plugins: [terser()]
   },
