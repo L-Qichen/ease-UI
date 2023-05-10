@@ -16,14 +16,14 @@ export default {
     plugins: [terser()]
   },
   plugins: [
+    vue({
+      include: /\.vue$/,
+    }),
     scss({ include: /\.scss$/, sass: dartSass }),
     esbuild({
       include: /\.[jt]s$/,
-      minify: process.env.NODE_ENV === 'production',
-      target: 'es2015'
+      minify: process.env.NODE_ENV === "production",
+      target: "es2015",
     }),
-    vue({
-      include: /\.vue$/,
-    })
   ],
 }
