@@ -1,6 +1,10 @@
 {
-  "name": "ease-UI",
+  "name": "ease-ui-vue",
   "version": "0.0.0",
+  "files": [
+    "dist/lib/*"
+  ],
+  "main": "dist/lib/ease-ui.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build && mv dist/fonts dist/assets/"
