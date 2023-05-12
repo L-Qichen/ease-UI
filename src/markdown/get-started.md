@@ -5,7 +5,7 @@ Please [install](#/doc/install) this UI library first.
 Import components in your project
 
 ```
-import {Button, Tabs, Switch, Dialog} from "ease-ui"
+import {Button, Tabs, Switch, Dialog} from "ease-ui-vue"
 ```
 
 You can then use any components you need.
@@ -20,7 +20,7 @@ You can then use any components you need.
 </template>
 
 <script>
-import {Button, Tabs, Switch, Dialog} from "ease-ui"
+import {Button, Tabs, Switch, Dialog} from "ease-ui-vue"
 export default {
   components: {Button}
 }
